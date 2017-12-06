@@ -86,17 +86,8 @@
     createLayout: function () {
         let keyboard = document.getElementById('keyboard');
         let language = this.currentLang;
-        console.log(language);
         let layout = this.layouts;
-        let layoutLength = Object.keys(this.layouts).length;
-        console.log(layoutLength);
         let row = this.layouts[language];
-        let rowLength = Object.keys(this.layouts[language]).length;
-        console.log(rowLength);
-        for ( let key in layout ) {
-            if ( key !== language ) {
-                continue
-            } else {
                 for ( let key in row ) {
                     let lengthRow = row[key][0].length;
                     let divRow = document.createElement(`div`)
@@ -113,8 +104,6 @@
                 }
             }
         }
-    }
-}
 
   keyTrainer.selectLanguage();
   keyTrainer.randChar();
