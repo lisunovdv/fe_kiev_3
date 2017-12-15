@@ -1,7 +1,7 @@
 'use strict';
 
 const lang = {
-  en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./ ",
+  en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./",
 };
 
 const keyTmp = document.querySelector('#key-tmp').textContent.trim();
@@ -26,7 +26,7 @@ let down = false;
 function keyDownHandler(event) {
   down ? false : down = true;
 
-  const pressedKey = lang.en.indexOf(event.key);
+  const pressedKey = event.key === ' ' ? 33 : lang.en.indexOf(event.key);
   const keys = document.querySelectorAll('button[data-note]');
   const playSound = (note) => {
     const audio = document.querySelector(`audio[data-note=${note}]`);
@@ -50,7 +50,7 @@ function keyDownHandler(event) {
   }
 
   for (const key of keys) {
-    if (key.name === event.code) {
+    if (key.textContent === event.key || key.name === event.code) {
       key.classList.add('keyboard__btn--active');
       break;
     }
