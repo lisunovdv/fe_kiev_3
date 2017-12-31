@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>New Module 8 Hometask</title>
+    <meta name="description" content="Домашнее задание по модулю 8">
+    <meta name="keywords" content="Javascript, обучение, модуль 8">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Модуль 8 - Домашнее задание</h1>
+    <h3>Напишите скрипт который реализует следующее поведение:</h3>
+    <ol>
+        <li>- При нажатии на клавишу (не виртуальной клавиатуры) должно обрабатываться событие keydown. (Для обработки нажатия клавиш, повесьте слушателя на window. window.addEventListener("keydown", callback);)
+        </li>
+        <li>- Должны обрабатываться только те клавиши, которые присутствуют в разметке HTML (на виртуальной клавиатуре).
+        </li>
+        <li>- Звук нажатия на клавишу должен соответсвовать ноте, описанной в атрибуте button data-note.
+        </li>
+        <li>- Подсветку текущей клавиши реализуйте с помощью класса keyboard__btn--active.
+        </li>
+        <li>- Чекбокс Sound должен включать и выключать звук нажатия на клавиши.
+        </li>
+    </ol>
+    <div class="slideThree">
+        <input type="checkbox" value="None" id="slideThree" name="check" checked />
+        <label for="slideThree"></label>
+        <span>Sound</span>
+    </div>
+    <div class="keyboard">
+        <div class="keyboard__row">
+            <button class="keyboard__btn" data-note="do">q</button>
+            <button class="keyboard__btn" data-note="re">w</button>
+            <button class="keyboard__btn" data-note="mi">e</button>
+            <button class="keyboard__btn" data-note="fa">r</button>
+            <button class="keyboard__btn" data-note="sol">t</button>
+            <button class="keyboard__btn" data-note="la">y</button>
+            <button class="keyboard__btn" data-note="la">u</button>
+            <button class="keyboard__btn" data-note="sol">i</button>
+            <button class="keyboard__btn" data-note="fa">o</button>
+            <button class="keyboard__btn" data-note="mi">p</button>
+            <button class="keyboard__btn" data-note="re">[</button>
+            <button class="keyboard__btn" data-note="do">]</button>
+        </div>
+        <div class="keyboard__row">
+            <button class="keyboard__btn" data-note="do">a</button>
+            <button class="keyboard__btn" data-note="re">s</button>
+            <button class="keyboard__btn" data-note="mi">d</button>
+            <button class="keyboard__btn" data-note="fa">f</button>
+            <button class="keyboard__btn" data-note="sol">g</button>
+            <button class="keyboard__btn" data-note="la">h</button>
+            <button class="keyboard__btn" data-note="la">j</button>
+            <button class="keyboard__btn" data-note="sol">k</button>
+            <button class="keyboard__btn" data-note="fa">l</button>
+            <button class="keyboard__btn" data-note="mi">;</button>
+            <button class="keyboard__btn" data-note="re">'</button>
+        </div>
+        <div class="keyboard__row">
+            <button class="keyboard__btn" data-note="do">z</button>
+            <button class="keyboard__btn" data-note="re">x</button>
+            <button class="keyboard__btn" data-note="mi">c</button>
+            <button class="keyboard__btn" data-note="fa">v</button>
+            <button class="keyboard__btn" data-note="sol">b</button>
+            <button class="keyboard__btn" data-note="sol">n</button>
+            <button class="keyboard__btn" data-note="fa">m</button>
+            <button class="keyboard__btn" data-note="mi">,</button>
+            <button class="keyboard__btn" data-note="re">.</button>
+            <button class="keyboard__btn" data-note="do">/</button>
+        </div>
+        <div class="keyboard__row">
+            <button class="keyboard__btn keyboard__btn--space" data-note="do">space</button>
+        </div>
+    </div>
+    <audio class="sonidos" src="//goo.gl/T1rxRG" data-note="do"></audio>
+    <audio class="sonidos" src="//goo.gl/KT8FN3" data-note="re"></audio>
+    <audio class="sonidos" src="//goo.gl/1SfsNS" data-note="mi"></audio>
+    <audio class="sonidos" src="//goo.gl/OsOCXe" data-note="fa"></audio>
+    <audio class="sonidos" src="//goo.gl/vukZmv" data-note="sol"></audio>
+    <audio class="sonidos" src="//goo.gl/Bjd9KT" data-note="la"></audio>
+    <audio class="sonidos" src="//goo.gl/MS9HTp" data-note="si"></audio>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
