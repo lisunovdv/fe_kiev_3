@@ -1,0 +1,61 @@
+html {
+    color: #333;
+    font: 500 18px/22px sans-serif;
+}
+
+label {
+    margin-top: 15px;
+}
+
+form {
+    padding: 10px;
+}
+
+.keyboard {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    width: 650px;
+    padding: 30px 50px;
+    background: #f6f6f6;
+    border: solid 2px #bbb;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #ccc;
+}
+
+.keyboard div {
+    font-size: 0;
+    line-height: 0;
+}
+
+.keyboard__btn {
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    background: #eee;
+    border: solid 2px #bbb;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #bbb;
+    color: #333;
+    font: 500 18px/22px sans-serif;
+    text-align: center;
+}
+
+.keyboard__space {
+    width: 388px;
+    height: 45px;
+    margin: 2px;
+    background: #eee;
+    border: solid 2px #bbb;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #bbb;
+    color: #333;
+    font: 500 18px/22px sans-serif;
+    text-align: center;
+}
+
+.keyboard__btn--active {
+    background: #fff;
+    box-shadow: inset 1px 1px 5px #bbb;
+}
+

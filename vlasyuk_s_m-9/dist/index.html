@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>New Module 9 Hometask</title>
+    <meta name="description" content="Домашнее задание по модулю 9">
+    <meta name="keywords" content="Javascript, обучение, модуль 9">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Модуль 9 - Домашнее задание</h1>
+    <p>Написать скрипт который собирает 3 строки клавиатуры и клавишу "пробел" из шаблона по заданому объекту.</p>
+    <p>Для зарендереной клавиатуры реализовать поведение из модуля 8, подсветка нажатой клавиши, отображение символа итд.</p>
+    <p><pre>
+      const lang = {
+        en: "qwertyuiop[]asdfghjkl;'zxcvbnm,./"
+      };
+    </pre></p>
+    <div class="slideThree">
+        <input type="checkbox" value="None" id="slideThree" name="check" checked />
+        <label for="slideThree"></label>
+        <span>Sound</span>
+    </div>
+    <div class="keyboard"></div>
+
+    <script type="text/template" id="keyboard-template">
+        <div class="keyboard__row">
+            <% for (var i=0; i<12; i++) { %>
+                <button class="keyboard__btn" data-note="<%=firstRow[i]%>">
+                    <%=en[i]%>
+                </button>
+                <% } %>
+        </div>
+        <div class="keyboard__row">
+            <% for (var i=12; i<23; i++) { %>
+                <button class="keyboard__btn" data-note="<%=secondRow[i-12]%>">
+                    <%=en[i]%>
+                </button>
+                <% } %>
+        </div>
+        <div class="keyboard__row">
+            <% for (var i=23; i<33; i++) { %>
+                <button class="keyboard__btn" data-note="<%=thirdRow[i-23]%>">
+                    <%=en[i]%>
+                </button>
+                <% } %>
+        </div>
+        <div class="keyboard__row">
+            <button class="keyboard__btn keyboard__btn--space" data-note="do">space</button>
+        </div>
+    </script>
+
+    <audio class="sonidos" src="//goo.gl/T1rxRG" data-note="do"></audio>
+    <audio class="sonidos" src="//goo.gl/KT8FN3" data-note="re"></audio>
+    <audio class="sonidos" src="//goo.gl/1SfsNS" data-note="mi"></audio>
+    <audio class="sonidos" src="//goo.gl/OsOCXe" data-note="fa"></audio>
+    <audio class="sonidos" src="//goo.gl/vukZmv" data-note="sol"></audio>
+    <audio class="sonidos" src="//goo.gl/Bjd9KT" data-note="la"></audio>
+    <audio class="sonidos" src="//goo.gl/MS9HTp" data-note="si"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>    
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
