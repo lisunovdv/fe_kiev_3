@@ -1,0 +1,67 @@
+.page-wrapper {
+  background-color: #eceff1;
+  min-height: 100vh;
+  width: 100%; }
+
+.contant-wrapper {
+  background-color: #fff;
+  border-left: double #006064;
+  border-right: double #006064;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 50px 0; }
+
+.contant {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100%; }
+
+.title {
+  color: #006064;
+  margin: 0 50px; }
+
+.keyboard {
+  margin: 75px auto;
+  width: 100%; }
+  .keyboard__row {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+  .keyboard__item {
+    align-items: center;
+    background-color: #eceff1;
+    border: 1px solid #e91e63;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #e91e63;
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    margin: 2px;
+    width: 55px; }
+    .keyboard__item:hover {
+      background-color: #fff;
+      border-color: #e91e63;
+      color: #e91e63; }
+    .keyboard__item--active {
+      background-color: #f50057;
+      color: #fff; }
+    .keyboard__item--whitespace {
+      min-width: 200px; }
+
+.sound {
+  margin: 40px auto 0;
+  width: 100%; }
+
+.volume {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */
