@@ -1,0 +1,94 @@
+$page-bg: #eceff1;
+$contant-wrapper-bg: #fff;
+$keys-color: #eceff1;
+$keys-color-hover: #fff;
+$keys-color-active: #f50057;
+$keys-text: #e91e63;
+$keys-text-hover: #e91e63;
+$keys-text-active: #fff;
+$keys-border-color: #e91e63;
+$keys-border-hover: #e91e63;
+$title-color: #006064;
+
+.page-wrapper {
+  background-color: $page-bg;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.contant-wrapper {
+  background-color: $contant-wrapper-bg;
+  border-left: double $title-color;
+  border-right: double $title-color;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+.contant {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.title {
+  color: $title-color;
+  margin: 0 50px;
+}
+
+.keyboard {
+  margin: 75px auto;
+  width: 100%;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__item {
+    align-items: center;
+    background-color: $keys-color;
+    border: 1px solid $keys-border-color;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: $keys-text;
+    display: flex;
+    height: 55px;
+    justify-content: center;
+    margin: 2px;
+    width: 55px;
+
+    &:hover {
+      background-color: $keys-color-hover;
+      border-color: $keys-border-hover;
+      color: $keys-text-hover;
+    }
+
+    &--active {
+    background-color: $keys-color-active;
+    color: $keys-text-active;
+    }
+
+    &--whitespace {
+        min-width: 200px;
+    }
+ }
+}
+
+.sound {
+    margin: 40px auto 0;
+    width: 100%;
+}
+
+.volume {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}

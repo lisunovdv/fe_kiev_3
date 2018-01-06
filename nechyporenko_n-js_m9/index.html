@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Homework, New modules, m8 by Nechyporenko Nataliia</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="contant-wrapper">
+            <header>
+                <h1 class="title">JS New Modules, Module 8, Nechyporenko N</h1>
+            </header>
+            <section class="contant">
+                <div class="sound">
+                    <label class="volume"><input type="checkbox" id="volume" name="volume" checked> Sound</label>
+                </div>
+                <div class="keyboard">
+
+                </div>
+            </section>
+        </div>
+    </div>
+    <audio src="audio/piano-a.wav" data-note="a"></audio>
+    <audio src="audio/piano-a1.wav" data-note="a1"></audio>
+    <audio src="audio/piano-b.wav" data-note="b"></audio>
+    <audio src="audio/piano-c.wav" data-note="c"></audio>
+    <audio src="audio/piano-c1.wav" data-note="c1"></audio>
+    <audio src="audio/piano-d.wav" data-note="d"></audio>
+    <audio src="audio/piano-d1.wav" data-note="d1"></audio>
+    <audio src="audio/piano-e.wav" data-note="e"></audio>
+    <audio src="audio/piano-f.wav" data-note="f"></audio>
+    <audio src="audio/piano-g.wav" data-note="g"></audio>
+    <audio src="audio/piano-g1.wav" data-note="g1"></audio>
+    <audio src="audio/piano-cut.wav" data-note="cut"></audio>
+
+    <script type="text/template" id="letterkeys">
+        <div class="keyboard__row">
+            <% for (let i = 0; i < rowKeys.length; i++) {
+                %>
+            <button class="keyboard__item" data-note="<%- note[i] %>"><%- rowKeys[i] %></button>
+            <% }; %>
+        </div>
+    </script>
+
+    <script type="text/template" id="whitespace">
+        <div class="keyboard__row">
+            <button class="keyboard__item keyboard__item--whitespace" data-note="<%- note[0] %>"><%- rowKeys[0] %></button>
+        </div>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" charset="utf-8"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
